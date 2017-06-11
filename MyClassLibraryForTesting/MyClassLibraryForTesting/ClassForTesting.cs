@@ -6,11 +6,28 @@ using System.Threading.Tasks;
 
 namespace MyClassLibraryForTesting
 {
+    // small calculator. Easy and simple for testing.
     public class ClassForTesting
     {
-        public int Add(int a, int b)
+        public double Add(double a, double b)
         {
             return a + b;
+        }
+
+        public double Substract(double a, double b)
+        {
+            return a - b;
+        }
+
+        public double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+
+        public double Divide(double a, double b)
+        {
+            if (b == 0) throw new Exception("You can`t divide by zero!");
+            return a / b;
         }
     }
 }
