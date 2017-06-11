@@ -29,5 +29,13 @@ namespace MyClassLibraryForTesting
             if (b == 0) throw new Exception("You can`t divide by zero!");
             return a / b;
         }
+
+        // method for testing with MOCK
+        public double AddAndMultiply(double a, double b)
+        {
+            double sum = Add(a, b);
+
+            return sum * a * b;
+        }
     }
 }
