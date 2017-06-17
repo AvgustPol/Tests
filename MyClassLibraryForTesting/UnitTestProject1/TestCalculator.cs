@@ -1,20 +1,19 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyClassLibraryForTesting;
-using Xunit;
 using FakeItEasy;
 
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class TestCalculator
     {
-        ClassForTesting _tmp;
+        CalculatorForTesting _tmp;
 
         [TestInitialize]
         public void Initialize()
         {
-            _tmp = new ClassForTesting();
+            _tmp = new CalculatorForTesting();
         }
 
         [TestMethod]
@@ -74,22 +73,6 @@ namespace UnitTestProject1
             //assert
             //Assert.Throws<Exception>(() => _sut.Divide(a, b));
             Assert.ThrowsException<Exception>(() => _tmp.Divide(a, b));
-        }
-
-        [TestMethod]
-        public void Add_2_and_3_then_mulpiply_result_and_2_and_3_result_30()
-        {
-            //arange
-            double a = 2;
-            double b = 3;
-
-            var fakeCalculator = A.Fake<ClassForTesting>();
-            A.CallTo(() => fakeCalculator.Add(2, 3)).Returns(5);
-
-            //act
-
-            //assert
-
         }
 
     }

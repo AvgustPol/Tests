@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyClassLibraryForTesting
 {
     // small calculator. Easy and simple for testing.
-    public class ClassForTesting
+    public class CalculatorForTesting
     {
         public double Add(double a, double b)
         {
@@ -24,6 +24,11 @@ namespace MyClassLibraryForTesting
             return a * b;
         }
 
+        public decimal Add(decimal sum, decimal price)
+        {
+            throw new NotImplementedException();
+        }
+
         public double Divide(double a, double b)
         {
             if (b == 0) throw new Exception("You can`t divide by zero!");
@@ -35,7 +40,7 @@ namespace MyClassLibraryForTesting
         {
             double sum = Add(a, b);
 
-            return sum * a * b;
+            return sum * a;
         }
     }
 }
