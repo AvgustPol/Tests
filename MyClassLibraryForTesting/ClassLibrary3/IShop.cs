@@ -10,5 +10,6 @@ namespace MyShop
     {
         decimal CalculatePrices(IList<Product> products);
         int CalculateAmount(IList<Product> products);
+        double CalculateCalories(IList<Product> products);
     }
 }

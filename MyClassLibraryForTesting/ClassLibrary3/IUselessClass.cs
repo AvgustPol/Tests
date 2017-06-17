@@ -10,5 +10,6 @@ namespace MyShop
     {
         decimal ReturnTheSameDecimal(decimal price);
         int ReturnTheSameInt(int amount);
+        double ReturnTheSameDouble(double amount);
     }
 }

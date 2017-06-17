@@ -47,5 +47,20 @@ namespace MyShop
 
             return sum;
         }
+
+        public double CalculateCalories(IList<Product> products)
+        {
+
+            double sum = 0;
+
+            foreach (var product in products)
+            {
+                sum += product.Calories;
+            }
+
+            sum = uselessThing.ReturnTheSameDouble(sum);
+
+            return sum;
+        }
     }
 }
