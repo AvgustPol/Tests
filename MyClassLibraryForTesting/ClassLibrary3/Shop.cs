@@ -20,7 +20,6 @@ namespace MyShop
 
         public decimal CalculatePrices(IList<Product> products)
         {
-            CalculatorForTesting tmp = new CalculatorForTesting();
 
             decimal sum = 0;
 
@@ -29,14 +28,13 @@ namespace MyShop
                 sum += product.Price;
             }
 
-            sum = uselessThing.ReturnTheSame(sum);
+            sum = uselessThing.ReturnTheSameDecimal(sum);
 
             return sum;
         }
 
         public int CalculateAmount(IList<Product> products)
         {
-            CalculatorForTesting tmp = new CalculatorForTesting();
 
             int sum = 0;
 
@@ -45,7 +43,7 @@ namespace MyShop
                 sum += product.Amount;
             }
 
-            sum = uselessThing.ReturnTheSame(sum);
+            sum = uselessThing.ReturnTheSameInt(sum);
 
             return sum;
         }

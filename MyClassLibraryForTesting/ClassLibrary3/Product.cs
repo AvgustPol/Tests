@@ -11,6 +11,12 @@ namespace MyShop
         public decimal Price { get; set; }
         public int Amount { get; set; }
 
+        public Product()
+        {
+            Price = 0;
+            Amount = 0;
+        }
+
         public Product(decimal newPrice, int newAmount)
         {
             Price = newPrice;

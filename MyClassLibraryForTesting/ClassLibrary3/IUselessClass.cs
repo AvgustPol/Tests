@@ -8,7 +8,7 @@ namespace MyShop
 {
     public interface IUselessClass
     {
-        decimal ReturnTheSame(decimal price);
-        int ReturnTheSame(int amount);
+        decimal ReturnTheSameDecimal(decimal price);
+        int ReturnTheSameInt(int amount);
     }
 }
